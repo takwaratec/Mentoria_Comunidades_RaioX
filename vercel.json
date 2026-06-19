@@ -1,6 +1,5 @@
 {
   "version": 2,
   "outputDirectory": "landing",
-  "framework": null,
-  "trailingSlash": true
+  "framework": null
 }
