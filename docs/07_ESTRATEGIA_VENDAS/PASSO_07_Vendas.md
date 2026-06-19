@@ -15,9 +15,9 @@ A melhor forma de vender a consultoria Comunidade Raio-X é demonstrando o valor
      > 
      > *Se você quiser, posso fazer uma auditoria rápida e gratuita dos últimos 3 dias de interações do seu grupo para te mostrar onde estão as dúvidas repetitivas que estão sugando o tempo do seu suporte e onde estão as sinergias. Topa bater um papo de 15 minutos?"*
 3. **A Call de 15 Minutos (Diagnóstico):**
-   * Apresente a triagem rápida que você fez (uma versão simplificada em PDF ou Notion).
-   * Mostre como a equipe dele perde tempo respondendo a links.
-   * **O Fechamento:** *"Eu posso fazer essa implantação completa do Painel Web Raio-X e cuidar da triagem de novos membros e resumos do Zoom para você na sua turma atual. O setup completo é R$ 3.000,00."*
+   * Apresente a triagem rápida que você fez (uma versão demonstrativa em PDF, Notion ou GitHub).
+   * Mostre como a equipe dele perde tempo respondendo a links e como os membros perdem o histórico e contexto ao entrarem atrasados.
+   * **O Fechamento:** *"Eu posso fazer a implantação completa do Painel Web Raio-X na sua mentoria. Temos duas modalidades: se você tiver equipe própria, eu faço todo o setup técnico e o treinamento deles para operarem de forma independente por R$ 6.000,00 pagos uma única vez. Mas, se preferir que eu cuide de toda a operação técnica nos bastidores (rodar scripts, manter o painel atualizado no ar e fazer os resumos das aulas do Zoom em menos de 2h), cobro uma taxa de montagem inicial de R$ 3.500,00 mais parcelas mensais de R$ 2.500,00 (ou uma fração correspondente por lote de atualizações) pelo período da turma. Qual formato faz mais sentido para você?"*
 
 ---
 

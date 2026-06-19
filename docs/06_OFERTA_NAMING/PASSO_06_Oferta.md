@@ -26,7 +26,7 @@ Para acelerar o fechamento de contratos de Consultoria Premium, inclua estes tr�
 
 1. **Bônus 1: Script de Transcrição Automatizada (Resumo Zoom):**
    * Ferramenta/prompt personalizado para transformar arquivos de áudio/texto de reuniões Zoom em resumos no padrão visual MkDocs em menos de 10 minutos.
-2. **Bônus 2: Template de Banco de Dados de Alunos no Notion:**
+2. **Bônus 2: Template de Banco de Dados de Alunos (Notion, Obsidian, Trello ou GitHub):**
    * Um painel completo de controle interno para a equipe de suporte gerenciar de forma visual e centralizada as fichas cadastrais, Instagram, neurodivergências e status dos alunos.
 3. **Bônus 3: Roteiro de Acolhimento e Abertura de Grupos:**
    * Modelo passo a passo de mensagens automáticas de boas-vindas, dinâmicas de introdução inicial e roteiros de engajamento para os primeiros 7 dias de grupo.

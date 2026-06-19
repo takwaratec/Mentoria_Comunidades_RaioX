@@ -4,23 +4,23 @@ Este passo define as rotinas práticas de operação da comunidade otimizada par
 
 ---
 
-## 🔁 O Ciclo Semanal de Curadoria
+## 🔁 O Ciclo Ativo de Curadoria (Diário ou Dinâmico)
 
-A curadoria da comunidade não pode ser um processo manual cansativo. Ela deve seguir este ciclo de 3 etapas semanais:
+A curadoria da comunidade não pode ser um processo manual cansativo. Ela deve seguir este ciclo de 3 etapas dinâmicas (diárias ou 2x a 3x por semana, dependendo da movimentação):
 
 ```mermaid
 graph LR
-    A[1. Triagem Semanal] --> B[2. Mapeamento de Sinergias]
+    A[1. Triagem Frequente] --> B[2. Mapeamento de Sinergias]
     B --> C[3. Atualização do Painel Web]
     C --> A
 ```
 
-1. **Triagem Semanal (Segunda-feira):**
-   * Exportar os logs de conversa do WhatsApp das últimas 24h.
-   * Rodar o script de triagem para identificar novas apresentações de novos membros.
-2. **Atualização de Sinergias (Quarta-feira):**
+1. **Triagem Ativa (Diária ou Dinâmica):**
+   * Exportar os logs de conversa do WhatsApp.
+   * Rodar o script de triagem para identificar novas apresentações de novos membros e contar a participação.
+2. **Atualização de Sinergias (Frequente):**
    * Mapear novos nichos e cruzar dados com participantes antigos.
-   * Se um novo participante trabalha em um segmento afim, adicioná-lo à respectiva sinergia (ex: grupo de saúde, tecnologia, dados).
+   * Se um novo participante trabalha em um segmento afim, adicioná-lo à respectiva sinergia (ex: grupo de saúde, tecnologia, dados, ou educação).
 3. **Resumo Pós-Aulas Zoom (Padrão Ouro):**
    * Assim que terminar um encontro ao vivo da turma, obter a transcrição gerada pelo Zoom/Teams.
    * Passar a transcrição em um prompt de IA com a diretriz do método para gerar:
