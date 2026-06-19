@@ -1,0 +1,50 @@
+site_name: Comunidade Raio-X
+site_url: https://takwaratec.github.io/Mentoria_Comunidades_RaioX/
+site_author: Takwara Tech
+site_description: O Método de Gestão, Curadoria Ativa e Conversão para Grupos de WhatsApp & Mentorias.
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+
+copyright: '&copy; 2026 Comunidade Raio-X. Todos os direitos reservados.'
+extra:
+  generator: false
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Início: index.md
+  - 01. Persona: 01_DIAGNOSTICO_PERSONA/PASSO_01_Persona.md
+  - 02. Jornada: 02_JORNADA_MENTORADO/PASSO_02_Jornada.md
+  - 03. Estrutura e Formato: 03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.md
+  - 04. Entrega e Acompanhamento: 04_ENTREGA_ACOMPANHAMENTO/PASSO_04_Entrega.md
+  - 05. Precificação: 05_PRECIFICACAO/PASSO_05_Precificacao.md
+  - 06. Oferta e Naming: 06_OFERTA_NAMING/PASSO_06_Oferta.md
+  - 07. Canais de Aquisição: 07_ESTRATEGIA_VENDAS/PASSO_07_Vendas.md
