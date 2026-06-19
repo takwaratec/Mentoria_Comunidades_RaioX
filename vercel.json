@@ -1,8 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "",
   "outputDirectory": "landing",
-  "installCommand": "",
   "framework": null,
   "trailingSlash": true
 }
