@@ -173,31 +173,69 @@ graph TB
 
 ---
 
-## 📈 Matriz de Posicionamento
+## 📈 Posicionamento de Mercado
 
-```mermaid
-%%{init: {'theme':'base','themeVariables': {'background': 'transparent','fontSize': '14px','quadrant1Fill': '#fff3e0','quadrant2Fill': '#e3f2fd','quadrant3Fill': '#ffebee','quadrant4Fill': '#f3e5f5'}}}%%
-quadrantChart
-    title Valor × Preço — Gestão de Comunidades
-    x-axis "Baixo Valor" --> "Alto Valor"
-    y-axis "Baixo Preço" --> "Alto Preço"
-    quadrant-1 "Commodity"
-    quadrant-2 "Premium (RX)"
-    quadrant-3 "Amador"
-    quadrant-4 "Superfaturada"
-    "CM Tradicional": [0.25, 0.35]
-    "Comunidade Raio-X": [0.85, 0.82]
-    "Gestão Amadora": [0.15, 0.10]
-    "Agência Digital": [0.65, 0.60]
-    "Suporte Interno": [0.30, 0.20]
-```
+<div class="rx-pos">
+  <div class="rx-pos-header">
+    <div class="rx-pos-label-y">Alto Preço ▲</div>
+    <div class="rx-pos-grid">
+      <div class="rx-pos-q rx-pos-q1">
+        <span class="rx-pos-tag">Tradicional</span>
+        <div class="rx-pos-dots">
+          <span class="rx-pos-dot" style="background:#e65100" title="CM Tradicional">CM</span>
+          <span class="rx-pos-dot" style="background:#78909c" title="Suporte Interno">SI</span>
+        </div>
+        <div class="rx-pos-desc">Moderação manual<br>Baixo valor agregado</div>
+      </div>
+      <div class="rx-pos-q rx-pos-q2">
+        <span class="rx-pos-tag">⭐ Premium (RX)</span>
+        <div class="rx-pos-dots">
+          <span class="rx-pos-dot" style="background:#1565c0" title="Comunidade Raio-X">RX</span>
+          <span class="rx-pos-dot" style="background:#6a1b9a" title="Agência Digital">AD</span>
+        </div>
+        <div class="rx-pos-desc">Engenharia de dados + IA<br>Alto valor agregado</div>
+      </div>
+      <div class="rx-pos-q rx-pos-q3">
+        <span class="rx-pos-tag">Amador</span>
+        <div class="rx-pos-dots">
+          <span class="rx-pos-dot" style="background:#c62828" title="Gestão Amadora">GA</span>
+        </div>
+        <div class="rx-pos-desc">Grupo largado<br>Perda total de valor</div>
+      </div>
+      <div class="rx-pos-q rx-pos-q4">
+        <span class="rx-pos-tag">Superfaturado</span>
+        <div class="rx-pos-dots"></div>
+        <div class="rx-pos-desc">Preço alto sem entrega<br>proporcional</div>
+      </div>
+    </div>
+    <div class="rx-pos-label-x">
+      <span>Baixo Valor</span>
+      <span>Alto Valor →</span>
+    </div>
+  </div>
 
-<div class="rx-mlegenda">
-    <div class="rx-mleg-item"><span class="rx-mleg-dot" style="background:#1565c0"></span> <strong>Comunidade Raio-X</strong> — Alto valor, preço justo</div>
-    <div class="rx-mleg-item"><span class="rx-mleg-dot" style="background:#e65100"></span> <strong>CM Tradicional</strong> — Só moderação, baixo valor</div>
-    <div class="rx-mleg-item"><span class="rx-mleg-dot" style="background:#c62828"></span> <strong>Gestão Amadora</strong> — Grupo largado, perda total</div>
-    <div class="rx-mleg-item"><span class="rx-mleg-dot" style="background:#6a1b9a"></span> <strong>Agência Digital</strong> — Preço alto, genérico</div>
-    <div class="rx-mleg-item"><span class="rx-mleg-dot" style="background:#78909c"></span> <strong>Suporte Interno</strong> — Custo oculto, sem método</div>
+  <div class="rx-pos-cards">
+    <div class="rx-pos-card" style="border-left-color:#1565c0">
+      <span class="rx-pos-dot-sm" style="background:#1565c0"></span>
+      <strong>Comunidade Raio-X</strong> — Alto valor, preço premium justo
+    </div>
+    <div class="rx-pos-card" style="border-left-color:#e65100">
+      <span class="rx-pos-dot-sm" style="background:#e65100"></span>
+      <strong>CM Tradicional</strong> — Só moderação manual, baixo valor
+    </div>
+    <div class="rx-pos-card" style="border-left-color:#c62828">
+      <span class="rx-pos-dot-sm" style="background:#c62828"></span>
+      <strong>Gestão Amadora</strong> — Grupo abandonado, sem engajamento
+    </div>
+    <div class="rx-pos-card" style="border-left-color:#6a1b9a">
+      <span class="rx-pos-dot-sm" style="background:#6a1b9a"></span>
+      <strong>Agência Digital</strong> — Preço alto, entrega genérica
+    </div>
+    <div class="rx-pos-card" style="border-left-color:#78909c">
+      <span class="rx-pos-dot-sm" style="background:#78909c"></span>
+      <strong>Suporte Interno</strong> — Equipe própria sem método
+    </div>
+  </div>
 </div>
 
 ---
