@@ -1,5 +1,7 @@
 {
   "version": 2,
-  "outputDirectory": "landing",
+  "buildCommand": "cp -r landing/* . && echo 'done'",
+  "outputDirectory": ".",
+  "installCommand": "",
   "framework": null
 }
