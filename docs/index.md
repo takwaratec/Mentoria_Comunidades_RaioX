@@ -335,5 +335,4 @@ mkdocs serve
     <strong>3️⃣</strong> <a href="https://takwaratec.github.io/Mentoria_Comunidades_RaioX/AGENDAMENTO.html">Agende uma auditoria gratuita do seu grupo</a></p>
 </div>
 
----
-&copy; 2026 Comunidade Raio-X. Todos os direitos reservados.
+
