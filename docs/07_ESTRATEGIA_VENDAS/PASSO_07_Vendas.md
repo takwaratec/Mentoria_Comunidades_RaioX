@@ -71,7 +71,7 @@ Envie uma mensagem privada para o mentor ou gestor de comunidades:
 > *Qual formato faz mais sentido para a sua estrutura?"*
 
 > [!NOTE]
-> Os valores exatos de cada modalidade estão detalhados no **[Passo 05 — Precificação](../05_PRECIFICACAO/PASSO_05_Precificacao.html)**.
+> Os valores exatos de cada modalidade estão detalhados no **[Passo 05 — Precificação](../05_PRECIFICACAO/PASSO_05_Precificacao.md)**.
 
 ---
 

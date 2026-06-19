@@ -86,7 +86,7 @@ pie showData
 
 > 🚨 **Sua comunidade de mentoria é gerida de forma reativa — ou sofre com silêncio e scroll infinito?** Descubra o ecossistema que reduz em até **70% o suporte básico** e ativa conexões de negócios entre seus membros, publicando painéis dinâmicos e resumos inteligentes direto na Web (**GitHub Pages & Vercel**).
 >
-> ➡️ **[Aprenda o Método](03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.html)** ou **[Contrate a Operação Técnica](05_PRECIFICACAO/PASSO_05_Precificacao.html)**
+> ➡️ **[Aprenda o Método](03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.md)** ou **[Contrate a Operação Técnica](05_PRECIFICACAO/PASSO_05_Precificacao.md)**
 
 ---
 
@@ -261,22 +261,22 @@ quadrantChart
 ## 🚀 Navegue pelos 7 Passos
 
 <div class="rx-stepper">
-<a href="01_DIAGNOSTICO_PERSONA/PASSO_01_Persona.html"><span class="rx-step-num">1</span> Diagnóstico da Persona</a>
-<a href="02_JORNADA_MENTORADO/PASSO_02_Jornada.html"><span class="rx-step-num">2</span> Jornada do Mentorado</a>
-<a href="03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.html"><span class="rx-step-num">3</span> Estrutura e Formato</a>
-<a href="04_ENTREGA_ACOMPANHAMENTO/PASSO_04_Entrega.html"><span class="rx-step-num">4</span> Entrega e Acompanhamento</a>
-<a href="05_PRECIFICACAO/PASSO_05_Precificacao.html"><span class="rx-step-num">5</span> Precificação</a>
-<a href="06_OFERTA_NAMING/PASSO_06_Oferta.html"><span class="rx-step-num">6</span> Oferta e Naming</a>
-<a href="07_ESTRATEGIA_VENDAS/PASSO_07_Vendas.html"><span class="rx-step-num">7</span> Canais de Aquisição</a>
+<a href="01_DIAGNOSTICO_PERSONA/PASSO_01_Persona.md"><span class="rx-step-num">1</span> Diagnóstico da Persona</a>
+<a href="02_JORNADA_MENTORADO/PASSO_02_Jornada.md"><span class="rx-step-num">2</span> Jornada do Mentorado</a>
+<a href="03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.md"><span class="rx-step-num">3</span> Estrutura e Formato</a>
+<a href="04_ENTREGA_ACOMPANHAMENTO/PASSO_04_Entrega.md"><span class="rx-step-num">4</span> Entrega e Acompanhamento</a>
+<a href="05_PRECIFICACAO/PASSO_05_Precificacao.md"><span class="rx-step-num">5</span> Precificação</a>
+<a href="06_OFERTA_NAMING/PASSO_06_Oferta.md"><span class="rx-step-num">6</span> Oferta e Naming</a>
+<a href="07_ESTRATEGIA_VENDAS/PASSO_07_Vendas.md"><span class="rx-step-num">7</span> Canais de Aquisição</a>
 </div>
 
 ---
 
 ## 📖 Glossário
 
-Termos como *High Ticket*, *ICP*, *Cross-Selling* ou *Churn* explicados em português no **[Glossário do Método](GLOSSARIO.html)**.
+Termos como *High Ticket*, *ICP*, *Cross-Selling* ou *Churn* explicados em português no **[Glossário do Método](GLOSSARIO.md)**.
 
-👉 **[Acessar Glossário →](GLOSSARIO.html)**
+👉 **[Acessar Glossário →](GLOSSARIO.md)**
 
 ---
 
@@ -292,9 +292,9 @@ mkdocs serve
 
 <div class="rx-cta">
     <h3>🚀 Pronto para transformar sua comunidade?</h3>
-    <p><strong>1️⃣</strong> <a href="03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.html">Aprenda e faça você mesmo</a><br>
-    <strong>2️⃣</strong> <a href="05_PRECIFICACAO/PASSO_05_Precificacao.html">Contrate a operação técnica</a><br>
-    <strong>3️⃣</strong> <a href="AGENDAMENTO.html">Agende uma auditoria gratuita</a></p>
+    <p><strong>1️⃣</strong> <a href="03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.md">Aprenda e faça você mesmo</a><br>
+    <strong>2️⃣</strong> <a href="05_PRECIFICACAO/PASSO_05_Precificacao.md">Contrate a operação técnica</a><br>
+    <strong>3️⃣</strong> <a href="AGENDAMENTO.md">Agende uma auditoria gratuita</a></p>
 </div>
 
 ---

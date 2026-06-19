@@ -100,4 +100,4 @@
 
 Este glossário é vivo e será atualizado conforme novos termos surgirem na metodologia.
 
-👉 **[Voltar ao início](index.html)**
+👉 **[Voltar ao início](index.md)**

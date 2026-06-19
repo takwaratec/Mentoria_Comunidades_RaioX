@@ -93,9 +93,9 @@ Veja se alguma dessas perguntas responde sua questão:
 | **Precisa ser presencial?** | Não. 100% remoto via Zoom. |
 | **Quanto tempo dura a auditoria?** | 15 minutos, sem compromisso. |
 | **Preciso instalar algo?** | Não. Só me adicionar como observador no grupo. |
-| **E se eu não tiver grupo ainda?** | A auditoria é para quem já tem grupo. Se não tem, comece pelo [Passo 01](01_DIAGNOSTICO_PERSONA/PASSO_01_Persona.html). |
-| **Quanto custa?** | A auditoria é gratuita. A implantação do método tem valores no [Passo 05](05_PRECIFICACAO/PASSO_05_Precificacao.html). |
+| **E se eu não tiver grupo ainda?** | A auditoria é para quem já tem grupo. Se não tem, comece pelo [Passo 01](01_DIAGNOSTICO_PERSONA/PASSO_01_Persona.md). |
+| **Quanto custa?** | A auditoria é gratuita. A implantação do método tem valores no [Passo 05](05_PRECIFICACAO/PASSO_05_Precificacao.md). |
 
 ---
 
-👉 **[Voltar ao início](index.html)**
+👉 **[Voltar ao início](index.md)**
