@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "pip install --break-system-packages mkdocs mkdocs-material && mkdocs build",
+  "buildCommand": "pip install --break-system-packages mkdocs mkdocs-material && python3 -m mkdocs build",
   "outputDirectory": "site",
   "installCommand": "",
   "framework": null,
