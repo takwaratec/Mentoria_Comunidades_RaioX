@@ -1,0 +1,10 @@
+{
+  "name": "comunidade-raiox",
+  "version": 2,
+  "buildCommand": "pip install mkdocs mkdocs-material && mkdocs build",
+  "outputDirectory": "site",
+  "installCommand": "",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false
+}
