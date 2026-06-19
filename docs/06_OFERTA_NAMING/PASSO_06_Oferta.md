@@ -12,10 +12,17 @@ Neste passo, apresentamos a estruturação de copy e o alinhamento da oferta irr
 
 ---
 
-## ✍️ Roteiro de Copy da Promessa Principal
+## ✍️ Roteiro de Copy e Headlines de Conversão
 
-Durante suas reuniões de fechamento ou em páginas de captura, utilize a seguinte promessa âncora:
+Utilize as seguintes variações de copy em suas comunicações, páginas de captura ou criativos de atração de clientes:
 
+### 📢 Headline Provocativa (Foco em Redes Sociais e Tráfego Pago)
+> **"Você ainda improvisa comandos soltos no ChatGPT para tentar gerir seus grupos de alunos — ou nem isso tem? Pare de operar a comunidade da sua mentoria no escuro. Aprenda a implementar ou contrate a Engenharia de Operações da Comunidade Raio-X."**
+
+### 💼 Headline Institucional (Foco em ROI e Landing Pages)
+> **"Sua comunidade de mentoria é gerida de forma reativa e adaptada por IAs genéricas ou sofre com silêncio e scroll infinito? Descubra o ecossistema que reduz em 70% o suporte e ativa conexões de negócios entre alunos no GitHub & Vercel. Aprenda o método ou terceirize a operação técnica conosco."**
+
+### 🎯 Promessa Âncora (Foco em Prospecção Direct/WhatsApp)
 > **"Transforme o grupo de WhatsApp silencioso da sua mentoria em um ecossistema ativo de negócios e networking. Economize 70% do tempo de suporte e identifique oportunidades de novos produtos em 7 dias."**
 
 ---

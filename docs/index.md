@@ -1,6 +1,17 @@
 # Comunidade Raio-X: O Método de Gestão, Curadoria Ativa e Conversão para Grupos de WhatsApp & Mentorias
 
-Bem-vindo ao portal metodológico da **Comunidade Raio-X**! 
+---
+
+### 🚨 Você ainda improvisa comandos soltos no ChatGPT para tentar gerir seus grupos de alunos — ou nem isso tem?
+
+> **Pare de perder alunos por falta de contexto e histórico, e de sobrecarregar seu suporte no WhatsApp.**
+> Descubra o ecossistema que reduz em até **70% o suporte básico** e ativa conexões de negócios entre seus membros, publicando painéis dinâmicos e resumos inteligentes direto na Web (**GitHub Pages & Vercel**).
+> 
+> **[Aprenda o Método](03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.md) ou [Contrate a Nossa Operação Técnica](05_PRECIFICACAO/PASSO_05_Precificacao.md).**
+
+---
+
+Bem-vindo ao portal metodológico da **Comunidade Raio-X**!
 
 Este material foi desenhado para mentores, infoprodutores, diretores de produto e gestores de comunidades que operam grupos de WhatsApp como canais de comunicação com alunos. A nossa premissa é simples: **grupos frios representam churn de alunos e dinheiro perdido na mesa. Grupos otimizados geram conexões, autoridade e novos negócios (upsell).**
 
