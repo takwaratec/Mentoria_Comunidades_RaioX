@@ -19,23 +19,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-          cache: pip
-          cache-dependency-path: |
-            **/requirements*.txt
-            **/pyproject.toml
-
+          python-version: '3.12'
       - name: Instalar dependências
-        run: |
-          pip install --upgrade pip
-          pip install mkdocs mkdocs-material
-
+        run: pip install mkdocs mkdocs-material
       - name: Build MkDocs
         run: mkdocs build
-
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/
