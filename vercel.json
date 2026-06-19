@@ -4,6 +4,6 @@
   "outputDirectory": "landing",
   "installCommand": "",
   "framework": null,
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false
 }
