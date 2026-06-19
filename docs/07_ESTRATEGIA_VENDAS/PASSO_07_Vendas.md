@@ -15,16 +15,20 @@ A melhor forma de vender a consultoria Comunidade Raio-X é demonstrando o valor
      > 
      > *Se você quiser, posso fazer uma auditoria rápida e gratuita dos últimos 3 dias de interações do seu grupo para te mostrar onde estão as dúvidas repetitivas que estão sugando o tempo do seu suporte e onde estão as sinergias. Topa bater um papo de 15 minutos?"*
 3. **A Call de 15 Minutos (Diagnóstico):**
-   * Apresente a triagem rápida que você fez (uma versão demonstrativa em PDF, Notion ou GitHub).
-   * Mostre como a equipe dele perde tempo respondendo a links e como os membros perdem o histórico e contexto ao entrarem atrasados.
-   * **O Fechamento:** *"Eu posso fazer a implantação completa do Painel Web Raio-X na sua mentoria. Temos duas modalidades: se você tiver equipe própria, eu faço todo o setup técnico e o treinamento deles para operarem de forma independente por R$ 6.000,00 pagos uma única vez. Mas, se preferir que eu cuide de toda a operação técnica nos bastidores (rodar scripts, manter o painel atualizado no ar e fazer os resumos das aulas do Zoom em menos de 2h), cobro uma taxa de montagem inicial de R$ 3.500,00 mais parcelas mensais de R$ 2.500,00 (ou uma fração correspondente por lote de atualizações) pelo período da turma. Qual formato faz mais sentido para você?"*
+   * Apresente a triagem rápida que você fez (uma versão demonstrativa no GitHub Pages ou Vercel).
+   * Mostre como a equipe dele perde tempo respondendo a links e como os membros perdem o histórico e contexto ao entrarem atrasados (a dor do scroll infinito).
+   * **O Fechamento:** *"Eu posso fazer a implantação completa do Painel Web Raio-X na sua mentoria. Temos duas modalidades: se você tiver equipe própria e quiser autonomia, eu faço todo o setup técnico no seu GitHub/Vercel e o treinamento da sua equipe para operarem de forma independente por R$ 10.000,00 pagos uma única vez. Mas, se preferir que eu cuide de toda a operação técnica nos bastidores (rodar scripts, manter o painel atualizado com novos censos e fazer os resumos das aulas do Zoom em menos de 2h), cobramos uma taxa de montagem e setup inicial de R$ 5.000,00 mais parcelas mensais de R$ 3.500,00 (ou uma fração correspondente por lote de atualizações) pelo período da turma. Qual formato faz mais sentido para a sua estrutura?"*
 
 ---
 
 ## ⚡ Estratégia de Venda Coletiva (Workshop de 2 Horas)
 
-Se você quiser vender a Mentoria de Grupo:
+Se você quiser vender em escala para múltiplos mentores e futuros gestores:
 
-1. Realize um workshop ao vivo de 2 horas no Zoom chamado: **"A Anatomia de Grupos Otimizados: Como engajar alunos e vender novos produtos via curadoria de WhatsApp"**.
+1. **O Evento:** Realize um workshop ao vivo de 2 horas no Zoom chamado: **"A Anatomia de Grupos Otimizados: Como engajar alunos e vender novos produtos via curadoria de WhatsApp"**.
 2. **Demonstração Prática:** Mostre na tela como exportar logs e rodar o script para gerar sinergias ao vivo (usando os dados das apresentações dos próprios participantes do workshop!).
-3. **A Oferta:** Venda de vagas na mentoria de 4 semanas por R$ 1.500,00/vaga.
+3. **A Oferta de Prestação de Serviços (Setup + Fração por Atualizações):**
+   * Em vez de vender apenas ingressos de mentoria, você pode ofertar a contratação direta do serviço sob uma modalidade de entrada facilitada para pequenos e futuros mentores:
+     * **Setup de Entrada:** R$ 3.000,00 (taxa inicial para montagem do site no GitHub Pages/Vercel e scripts personalizados).
+     * **Fração por Atualização:** R$ 250,00 por lote de atualização (ou R$ 1.000,00/mês para até 4 atualizações).
+   * Isso reduz a barreira de entrada técnica e financeira, garantindo receita recorrente e estabilidade operacional para quem está começando a tracionar mentorias.

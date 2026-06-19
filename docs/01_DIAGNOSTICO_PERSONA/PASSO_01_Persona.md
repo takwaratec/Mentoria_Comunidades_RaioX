@@ -22,8 +22,8 @@ Para vender esse produto de forma eficaz, você precisa mapear as seguintes frus
 * 💬 **Suporte Repetitivo e Caótico:** Dúvidas sobre agendas, links da Hotmart, regras de suporte e links de IA repetem-se dezenas de vezes nas conversas, gerando ruído e desperdício de tempo da equipe de suporte.
 * 🧩 **Falta de Clareza de Perfis (Quem é Quem?):** O mentor não sabe a localização física, profissão e o nicho de metade do grupo. Sem saber com quem está falando, é impossível refinar o conteúdo das aulas ou ofertar um upsell de forma cirúrgica.
 * 🤝 **Sinergias Perdidas:** Alunos com complementos de negócios fantásticos (ex: uma psicóloga infantil e uma pedagoga que cuidam de neurodivergência; ou um ambientalista e um professor de surf ecológico) não se conectam por pura falta de mapeamento ativo.
-* 📜 **Perda de Contexto e Histórico (Membros Atrasados):** Alunos que entram no grupo dias ou semanas após o início, devido a várias interações e centenas de avisos anteriores, ficam completamente perdidos por não terem acesso ao histórico anterior de mensagens do WhatsApp.
-* 🌀 **Sobrecarga de Notificações (Scroll Infinito):** Membros que passam algumas horas offline e retornam com dezenas ou centenas de mensagens acumuladas sentem-se desestimulados a rolar a tela inteira; com o Raio-X e os resumos pós-Zoom, eles não precisam rolar infinitamente para saber o que aconteceu e pegar as decisões essenciais.
+* 📜 **Membros Atrasados & Sem Acesso ao Histórico:** Alunos que entram no grupo depois de várias interações e avisos ficam completamente desorientados por não terem acesso ao histórico anterior de mensagens do WhatsApp.
+* 🌀 **Sobrecarga de Notificações (Scroll Infinito):** Membros que passam algumas horas offline ou retornam com muitas mensagens não lidas sentem-se desestimulados a rolar a tela inteira; com o Raio-X e os resumos pós-Zoom, eles não precisam rolar para saber o que aconteceu e acompanhar as decisões essenciais.
 
 ---
 
