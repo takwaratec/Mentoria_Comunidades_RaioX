@@ -5,9 +5,5 @@
   "installCommand": "",
   "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/sobre", "destination": "/sobre.html" },
-    { "source": "/agendamento", "destination": "/sobre.html" }
-  ]
+  "trailingSlash": false
 }
