@@ -30,6 +30,26 @@ graph TD
 
 Identifique infoprodutores e mentores que você já acompanha ou dos quais é aluno. Grupos de entrada de eventos ao vivo e mentorias em que você participa são locais ideais.
 
+---
+
+### ⚠️ O Desafio Técnico do Histórico do WhatsApp
+
+Antes de disparar a abordagem, considere uma limitação técnica crítica: **novos membros que entram em um grupo de WhatsApp não têm acesso às mensagens enviadas antes do seu ingresso**. 
+
+Se você acabou de entrar no grupo de um cliente em potencial, **não conseguirá extrair logs do histórico passado**. Para contornar essa barreira técnica, adote uma destas duas táticas:
+
+#### 🟢 Tática A: O Cavalo de Troia (Membro Ativo)
+* **Quando usar:** Em mentorias ou grupos de alunos nos quais você já está inserido como participante há algum tempo.
+* **Operação:** Como você já tem as mensagens no seu próprio celular, basta fazer a exportação do arquivo `.txt` local, rodar o script e enviar a triagem pré-pronta como um presente de alto valor para o mentor.
+
+#### 🔵 Tática B: O Gancho de Auditoria (Acesso Condicionado)
+* **Quando usar:** Em grupos nos quais você não tem acesso ou acabou de ser inserido (sem histórico).
+* **Operação:** Na mensagem de abordagem, em vez de enviar o relatório pronto, você solicita o log para rodar o diagnóstico gratuito:
+  > *"Fala, [Nome]! Tenho um sistema de inteligência de dados que analisa a saúde operacional de comunidades. Se você ou seu suporte puderem exportar o arquivo `.txt` do grupo dos últimos 3 dias (sem mídias, garantindo 100% de privacidade dos dados) e me enviar, eu rodo um diagnóstico gratuito para expor onde o suporte perde mais tempo e quais sinergias de negócios estão ocultas. Apresento tudo em uma chamada rápida de 15 minutos."*
+* **Qualificação de Leads:** Esse pedido funciona como um filtro de intenção. Se o mentor se dispõe a exportar e enviar o log, ele é um lead altamente engajado e propenso a contratar.
+
+---
+
 ### 2. Abordagem de Alto Valor (Direct/WhatsApp)
 
 Envie uma mensagem privada para o mentor ou gestor de comunidades:
