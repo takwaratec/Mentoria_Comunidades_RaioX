@@ -330,9 +330,9 @@ mkdocs serve
 
 <div class="rx-cta">
     <h3>🚀 Pronto para transformar sua comunidade?</h3>
-    <p><strong>1️⃣</strong> <a href="03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.md">Aprenda e faça você mesmo</a><br>
-    <strong>2️⃣</strong> <a href="05_PRECIFICACAO/PASSO_05_Precificacao.md">Contrate a operação técnica</a><br>
-    <strong>3️⃣</strong> <a href="AGENDAMENTO.md">Agende uma auditoria gratuita</a></p>
+    <p><strong>1️⃣</strong> <a href="https://takwaratec.github.io/Mentoria_Comunidades_RaioX/03_ESTRUTURA_FORMATO/PASSO_03_Estrutura.html">Aprenda o método e faça você mesmo</a><br>
+    <strong>2️⃣</strong> <a href="https://takwaratec.github.io/Mentoria_Comunidades_RaioX/05_PRECIFICACAO/PASSO_05_Precificacao.html">Contrate nossa operação técnica especializada</a><br>
+    <strong>3️⃣</strong> <a href="https://takwaratec.github.io/Mentoria_Comunidades_RaioX/AGENDAMENTO.html">Agende uma auditoria gratuita do seu grupo</a></p>
 </div>
 
 ---
