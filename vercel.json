@@ -3,10 +3,5 @@
   "buildCommand": "",
   "outputDirectory": "landing",
   "installCommand": "",
-  "framework": null,
-  "cleanUrls": false,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/sobre", "destination": "/sobre.html" }
-  ]
+  "framework": null
 }
