@@ -4,6 +4,10 @@
   "outputDirectory": "landing",
   "installCommand": "",
   "framework": null,
-  "cleanUrls": false,
-  "trailingSlash": false
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/sobre", "destination": "/sobre.html" },
+    { "source": "/agendamento", "destination": "/sobre.html" }
+  ]
 }
