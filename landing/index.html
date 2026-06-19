@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comunidade Raio-X — Acelere Sua Mentoria Digital</title>
+<meta name="description" content="Método de gestão, curadoria ativa e conversão para grupos de WhatsApp e mentorias. Reduza o suporte em 70% e ative conexões de negócios.">
+<style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;color:#1a1a2e;background:#f8faff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto}
+
+/* ===== VARIAVEIS ===== */
+:root{
+  --blue-50:#e8f0fe;
+  --blue-100:#c2d7fc;
+  --blue-200:#7bb3f0;
+  --blue-400:#2196f3;
+  --blue-600:#1565c0;
+  --blue-800:#0d47a1;
+  --blue-900:#002171;
+  --accent:#00bcd4;
+  --dark:#1a1a2e;
+  --gray:#64748b;
+  --light:#f1f5f9;
+  --gradient-hero:linear-gradient(135deg,#0d47a1,#1565c0,#1976d2,#2196f3);
+  --gradient-cta:linear-gradient(135deg,#1565c0,#0d47a1);
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:0 4px 20px rgba(0,0,0,0.1);
+  --shadow-lg:0 10px 40px rgba(0,0,0,0.15);
+  --radius:12px;
+  --max-w:1200px;
+}
+
+/* ===== PASSWORD GATE ===== */
+#password-gate{
+  position:fixed;inset:0;z-index:99999;
+  background:var(--gradient-hero);
+  display:flex;align-items:center;justify-content:center;
+  font-family:inherit;
+}
+#password-gate .pg-card{
+  background:#fff;border-radius:20px;padding:48px 40px 40px;
+  max-width:420px;width:90%;text-align:center;
+  box-shadow:var(--shadow-lg);
+}
+#password-gate .pg-lock{font-size:48px;margin-bottom:8px}
+#password-gate h2{font-size:1.5rem;color:var(--blue-800);margin-bottom:4px}
+#password-gate p{color:var(--gray);font-size:0.9rem;margin-bottom:24px}
+#password-gate input{
+  width:100%;padding:14px 16px;border:2px solid #e2e8f0;border-radius:10px;
+  font-size:1rem;text-align:center;outline:none;transition:border .2s;
+  font-family:inherit;
+}
+#password-gate input:focus{border-color:var(--blue-400)}
+#password-gate .pg-error{
+  color:#d32f2f;font-size:0.85rem;margin-top:8px;display:none
+}
+#password-gate button{
+  margin-top:16px;width:100%;padding:14px;border:none;border-radius:10px;
+  background:var(--gradient-hero);color:#fff;font-size:1rem;font-weight:600;
+  cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit;
+}
+#password-gate button:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
+#password-gate .pg-footer{font-size:0.75rem;color:#94a3b8;margin-top:20px}
+
+/* ===== NAVBAR ===== */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,0.06);padding:0 24px;
+  transition:box-shadow .3s;
+}
+nav.scrolled{box-shadow:var(--shadow-sm)}
+.nav-inner{
+  max-width:var(--max-w);margin:0 auto;display:flex;
+  align-items:center;justify-content:space-between;height:64px;
+}
+.nav-brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;color:var(--blue-800)}
+.nav-brand img{width:36px;height:36px;border-radius:8px}
+.nav-links{display:flex;gap:24px;align-items:center;list-style:none}
+.nav-links a{font-size:0.875rem;font-weight:500;color:var(--dark);transition:color .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--blue-400);transition:width .2s}
+.nav-links a:hover{color:var(--blue-600)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{
+  background:var(--gradient-hero);color:#fff !important;padding:8px 20px;
+  border-radius:8px;font-weight:600;font-size:0.85rem !important;
+  transition:transform .2s,box-shadow .2s !important;
+}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:var(--shadow-md) !important}
+.nav-cta::after{display:none !important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nav-toggle span{width:24px;height:2.5px;background:var(--blue-800);border-radius:2px;transition:.3s}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:var(--gradient-hero);color:#fff;padding:100px 24px 80px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 20% 80%,rgba(255,255,255,0.08) 0%,transparent 50%),
+             radial-gradient(circle at 80% 20%,rgba(255,255,255,0.05) 0%,transparent 50%);
+  pointer-events:none;
+}
+.hero-content{max-width:var(--max-w);text-align:center;position:relative;z-index:1}
+.hero-badge{
+  display:inline-block;background:rgba(255,255,255,0.15);backdrop-filter:blur(4px);
+  padding:6px 18px;border-radius:20px;font-size:0.8rem;font-weight:600;
+  letter-spacing:0.05em;margin-bottom:24px;border:1px solid rgba(255,255,255,0.2);
+}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.15;margin-bottom:16px}
+.hero h1 span{display:block}
+.hero p{font-size:clamp(1rem,2vw,1.2rem);max-width:640px;margin:0 auto 32px;opacity:0.9;line-height:1.7}
+.hero-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:14px 32px;
+  border-radius:10px;font-weight:600;font-size:0.95rem;
+  transition:transform .2s,box-shadow .2s;cursor:pointer;border:none;font-family:inherit;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-primary{background:#fff;color:var(--blue-800)}
+.btn-secondary{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.3)}
+.btn-secondary:hover{background:rgba(255,255,255,0.2)}
+.hero-stats{
+  display:flex;gap:32px;justify-content:center;margin-top:48px;flex-wrap:wrap;
+}
+.hero-stat{text-align:center}
+.hero-stat .num{font-size:2rem;font-weight:800;display:block}
+.hero-stat .label{font-size:0.8rem;opacity:0.8}
+
+/* ===== SECTIONS ===== */
+section{padding:80px 24px}
+.section-inner{max-width:var(--max-w);margin:0 auto}
+.section-tag{
+  display:inline-block;color:var(--blue-600);font-weight:700;font-size:0.75rem;
+  text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;
+}
+.section-title{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:var(--blue-900);margin-bottom:12px}
+.section-sub{font-size:1.05rem;color:var(--gray);max-width:600px;margin-bottom:40px;line-height:1.7}
+
+/* ===== BENEFITS ===== */
+.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.benefit-card{
+  background:#fff;border-radius:var(--radius);padding:28px 24px;
+  border:1px solid #e8edf5;transition:transform .3s,box-shadow .3s;
+}
+.benefit-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.benefit-card .icon{font-size:2rem;margin-bottom:12px}
+.benefit-card h3{font-size:1.05rem;font-weight:700;margin-bottom:6px;color:var(--blue-800)}
+.benefit-card p{font-size:0.9rem;color:var(--gray);line-height:1.6}
+
+/* ===== METHOD ===== */
+.method{background:#fff}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.step-card{
+  display:flex;gap:16px;padding:20px;border-radius:var(--radius);
+  border:1px solid #e8edf5;transition:transform .3s,box-shadow .3s;
+}
+.step-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.step-num{
+  width:40px;height:40px;border-radius:10px;display:flex;
+  align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;
+  flex-shrink:0;color:#fff;
+}
+.s1{background:linear-gradient(135deg,#e53935,#c62828)}
+.s2{background:linear-gradient(135deg,#fb8c00,#e65100)}
+.s3{background:linear-gradient(135deg,#fdd835,#f9a825);color:#333}
+.s4{background:linear-gradient(135deg,#29b6f6,#0288d1)}
+.s5{background:linear-gradient(135deg,#ab47bc,#6a1b9a)}
+.s6{background:linear-gradient(135deg,#5c6bc0,#283593)}
+.s7{background:linear-gradient(135deg,#26a69a,#00695c)}
+.step-card h4{font-size:0.95rem;font-weight:700;margin-bottom:2px;color:var(--blue-800)}
+.step-card p{font-size:0.82rem;color:var(--gray);line-height:1.5}
+
+/* ===== IMPACT CHART ===== */
+.impact-chart{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:32px 0}
+.impact-bar{flex:1;min-width:140px;max-width:200px;text-align:center}
+.impact-bar .bar-track{
+  height:180px;background:#e8edf5;border-radius:8px 8px 0 0;
+  display:flex;align-items:flex-end;overflow:hidden;position:relative;
+}
+.impact-bar .bar-fill{
+  width:100%;border-radius:8px 8px 0 0;transition:height 1s ease;
+  display:flex;align-items:flex-start;justify-content:center;padding-top:6px;
+  color:#fff;font-weight:700;font-size:0.8rem;
+}
+.impact-bar .bar-label{font-size:0.82rem;font-weight:600;margin-top:8px;color:var(--blue-800)}
+.impact-bar .bar-sub{font-size:0.72rem;color:var(--gray)}
+
+/* ===== PRICING ===== */
+.pricing{background:var(--light)}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:start}
+.pricing-card{
+  background:#fff;border-radius:16px;padding:32px 28px;
+  border:1px solid #e8edf5;position:relative;transition:transform .3s,box-shadow .3s;
+}
+.pricing-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.pricing-card.featured{
+  border:2px solid var(--blue-400);transform:scale(1.03);
+}
+.pricing-card.featured:hover{transform:scale(1.03) translateY(-4px)}
+.pricing-badge{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:var(--gradient-hero);color:#fff;padding:4px 20px;
+  border-radius:20px;font-size:0.75rem;font-weight:700;white-space:nowrap;
+}
+.pricing-card h3{font-size:1.1rem;font-weight:700;margin-bottom:4px;color:var(--blue-800)}
+.pricing-card .desc{font-size:0.85rem;color:var(--gray);margin-bottom:16px;min-height:40px}
+.pricing-card .price{font-size:2rem;font-weight:800;color:var(--blue-800);margin-bottom:4px}
+.pricing-card .price span{font-size:0.9rem;font-weight:400;color:var(--gray)}
+.pricing-card .period{font-size:0.8rem;color:var(--gray);margin-bottom:20px}
+.pricing-card ul{list-style:none;padding:0;margin:0 0 24px}
+.pricing-card ul li{
+  padding:6px 0;font-size:0.85rem;color:var(--dark);
+  display:flex;align-items:center;gap:8px;
+}
+.pricing-card ul li::before{content:'✓';color:var(--blue-400);font-weight:700}
+.pricing-card .btn{width:100%;justify-content:center}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.testimonial-card{
+  background:#fff;border-radius:var(--radius);padding:28px 24px;
+  border:1px solid #e8edf5;position:relative;
+}
+.testimonial-card::before{
+  content:'"';position:absolute;top:12px;left:20px;font-size:3rem;
+  color:var(--blue-100);font-weight:700;line-height:1;font-family:Georgia,serif;
+}
+.testimonial-card p{font-size:0.92rem;color:var(--dark);font-style:italic;margin-bottom:16px;line-height:1.7}
+.testimonial-card .author{font-weight:600;font-size:0.85rem;color:var(--blue-600)}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid #e8edf5;padding:16px 0}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;
+  font-weight:600;font-size:0.95rem;cursor:pointer;color:var(--blue-800);
+  user-select:none;
+}
+.faq-q .arrow{font-size:1.2rem;transition:transform .3s;color:var(--blue-400)}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg)}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;
+  font-size:0.88rem;color:var(--gray);line-height:1.7;
+}
+.faq-item.open .faq-a{max-height:300px;padding-top:12px}
+
+/* ===== CTA ===== */
+.cta-section{
+  background:var(--gradient-cta);color:#fff;text-align:center;
+}
+.cta-section .section-title{color:#fff}
+.cta-section .section-sub{color:rgba(255,255,255,0.85)}
+.cta-section .btn-primary{background:#fff;color:var(--blue-800)}
+.cta-section .btn-secondary{border-color:rgba(255,255,255,0.4)}
+.cta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:32px;}
+.cta-card{
+  background:rgba(255,255,255,0.1);backdrop-filter:blur(4px);border-radius:var(--radius);
+  padding:24px;text-align:center;border:1px solid rgba(255,255,255,0.15);
+  transition:transform .3s;
+}
+.cta-card:hover{transform:translateY(-3px)}
+.cta-card .num{font-size:2rem;font-weight:800;display:block;margin-bottom:4px}
+.cta-card p{font-size:0.85rem;opacity:0.9}
+
+/* ===== FOOTER ===== */
+footer{padding:40px 24px;background:var(--blue-900);color:rgba(255,255,255,0.7);font-size:0.85rem}
+.footer-inner{max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer a{color:rgba(255,255,255,0.9);text-decoration:underline}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:16px 24px 24px;gap:16px;border-bottom:1px solid #e8edf5;box-shadow:var(--shadow-md)}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .hero{padding:80px 16px 60px}
+  section{padding:48px 16px}
+  .pricing-card.featured{transform:none}
+  .pricing-card.featured:hover{transform:translateY(-4px)}
+  footer .footer-inner{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="password-gate">
+  <div class="pg-card">
+    <div class="pg-lock">🔒</div>
+    <h2>Acesso Restrito</h2>
+    <p>Área exclusiva para clientes e convidados.<br>Insira a senha para continuar.</p>
+    <input type="password" id="pg-input" placeholder="Digite a senha" autocomplete="off">
+    <div class="pg-error" id="pg-error">Senha incorreta. Tente novamente.</div>
+    <button onclick="checkPassword()">Acessar →</button>
+    <div class="pg-footer">Comunidade Raio-X © 2026</div>
+  </div>
+</div>
+
+<script>
+const PASSWORD = 'raiox2026';
+function checkPassword(){
+  const input = document.getElementById('pg-input').value;
+  if(input === PASSWORD){
+    document.getElementById('password-gate').style.display='none';
+    document.body.style.overflow='';
+  } else {
+    document.getElementById('pg-error').style.display='block';
+    document.getElementById('pg-input').value='';
+    document.getElementById('pg-input').focus();
+  }
+}
+document.getElementById('pg-input').addEventListener('keydown',function(e){
+  if(e.key==='Enter') checkPassword();
+});
+document.addEventListener('DOMContentLoaded',function(){
+  document.body.style.overflow='hidden';
+});
+</script>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">
+      <img src="assets/images/logo-comunidade-raiox.svg" alt="Logo" onerror="this.style.display='none'">
+      Raio-X
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#metodo">Método</a></li>
+      <li><a href="#precos">Preços</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contato" class="nav-cta">Agendar Auditoria</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🔬 Metodologia Registrada</div>
+    <h1>Transforme seu Grupo de WhatsApp<br><span>em um Ativo Estratégico</span></h1>
+    <p>O método Comunidade Raio-X reduz em até <strong>70% o suporte repetitivo</strong> da sua mentoria, ativa conexões de negócios entre seus alunos e publica painéis interativos na web — tudo automatizado com IA.</p>
+    <div class="hero-buttons">
+      <a href="#contato" class="btn btn-primary">📅 Agendar Auditoria Gratuita</a>
+      <a href="#metodo" class="btn btn-secondary">↓ Conhecer o Método</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num">-70%</span><span class="label">Suporte Reativo</span></div>
+      <div class="hero-stat"><span class="num">+∞</span><span class="label">Sinergias Ativadas</span></div>
+      <div class="hero-stat"><span class="num">7</span><span class="label">Passos Estruturados</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section id="beneficios">
+  <div class="section-inner">
+    <span class="section-tag">🔬 Benefícios</span>
+    <h2 class="section-title">Por que a Comunidade Raio-X?</h2>
+    <p class="section-sub">Mentores e infoprodutores perdem alunos por falta de engajamento nos grupos de WhatsApp. O RX inverte esse cenário.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="icon">🧹</div>
+        <h3>Fim do Suporte Repetitivo</h3>
+        <p>Dúvidas sobre links, agendas e regras são sanadas por atalhos fixados no painel web. Sua equipe economiza até 70% do tempo.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🔗</div>
+        <h3>Sinergias entre Alunos</h3>
+        <p>Cruzamos dados de nicho, localização e redes sociais para criar conexões de negócios dentro da sua própria comunidade.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">📊</div>
+        <h3>Painel Interativo na Web</h3>
+        <p>Cada aluno tem acesso a um raio-X completo da turma: quem são os membros, o que fazem e com quem podem fazer negócios.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🤖</div>
+        <h3>Resumos Pós-Zoom em 2h</h3>
+        <p>Transcrições de aulas viram resumos executivos estruturados com tarefas e links úteis — publicados automaticamente no painel.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">📈</div>
+        <h3>Upsell Direcionado</h3>
+        <p>Com o mapa completo de perfis, você sabe exatamente para quem e como ofertar seu próximo produto ou mentoria avançada.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🛡️</div>
+        <h3>Redução de Churn</h3>
+        <p>Alunos engajados e conectados não cancelam. A fidelização sobe enquanto a evasão despenca.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section id="metodo" class="method">
+  <div class="section-inner">
+    <span class="section-tag">📋 Metodologia</span>
+    <h2 class="section-title">Os 7 Passos do Método RX</h2>
+    <p class="section-sub">Da prospecção ao acompanhamento contínuo — um sistema completo para transformar a gestão da sua comunidade.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num s1">01</div>
+        <div><h4>Persona</h4><p>Diagnóstico de quem precisa da otimização e mapeamento das dores do mentor.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num s2">02</div>
+        <div><h4>Jornada</h4><p>Do caos e silêncio no grupo à clareza estratégica com engajamento ativo.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num s3">03</div>
+        <div><h4>Estrutura</h4><p>Definição do formato de entrega: consultoria, mentoria ou recorrência.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num s4">04</div>
+        <div><h4>Entrega</h4><p>Curadoria ativa, resumos pós-Zoom e automações com IA.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num s5">05</div>
+        <div><h4>Precificação</h4><p>Modelos High Ticket e recorrência mensal com ROI comprovado.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num s6">06</div>
+        <div><h4>Oferta</h4><p>Copy irresistível, naming do método e promessa de aceleração.</p></div>
+      </div>
+      <div class="step-card">
+        <div class="step-num s7">07</div>
+        <div><h4>Aquisição</h4><p>Vendas consultivas através de auditorias gratuitas demonstrativas.</p></div>
+      </div>
+    </div>
+
+    <div class="impact-chart">
+      <div class="impact-bar">
+        <div class="bar-track"><div class="bar-fill" style="height:30%;background:linear-gradient(180deg,#42a5f5,#1565c0)">-70%</div></div>
+        <div class="bar-label">Suporte</div><div class="bar-sub">Horas reduzidas</div>
+      </div>
+      <div class="impact-bar">
+        <div class="bar-track"><div class="bar-fill" style="height:22%;background:linear-gradient(180deg,#66bb6a,#1b5e20)">R$ 25k</div></div>
+        <div class="bar-label">Economia</div><div class="bar-sub">Suporte/ano</div>
+      </div>
+      <div class="impact-bar">
+        <div class="bar-track"><div class="bar-fill" style="height:40%;background:linear-gradient(180deg,#ffa726,#e65100)">R$ 35k</div></div>
+        <div class="bar-label">Upsells</div><div class="bar-sub">Novos negócios</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREÇOS -->
+<section id="precos" class="pricing">
+  <div class="section-inner">
+    <span class="section-tag">💰 Investimento</span>
+    <h2 class="section-title">Escolha o Formato Ideal</h2>
+    <p class="section-sub">Duas modalidades para diferentes necessidades. Ambas com setup completo e suporte dedicado.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>📘 Aprenda e Faça</h3>
+        <p class="desc">Capacitação completa para sua equipe operar o sistema com autonomia.</p>
+        <div class="price">R$ 8.000 <span>a R$ 12.000</span></div>
+        <div class="period">Pagamento único · Setup técnico</div>
+        <ul>
+          <li>Extração e higienização de logs</li>
+          <li>Setup do GitHub + deploy GitHub Pages</li>
+          <li>2 encontros de treinamento via Zoom</li>
+          <li>30 dias de suporte pós-implantação</li>
+          <li>Acesso vitalício ao método</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary" style="background:var(--gradient-hero);color:#fff">Quero esse formato</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">🔥 Mais Escolhido</div>
+        <h3>🚀 Operação Terceirizada</h3>
+        <p class="desc">Nós operamos toda a stack técnica enquanto você foca no conteúdo.</p>
+        <div class="price">R$ 5.000 <span>+ R$ 3.500/mês</span></div>
+        <div class="period">Setup único + mensalidade</div>
+        <ul>
+          <li>Setup completo da infraestrutura</li>
+          <li>Curadoria ativa 2-3x por semana</li>
+          <li>Resumos pós-Zoom em até 2h</li>
+          <li>Alertas de sinergias estratégicas</li>
+          <li>Painel sempre atualizado</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary" style="background:var(--gradient-hero);color:#fff">Quero esse formato</a>
+      </div>
+
+      <div class="pricing-card">
+        <h3>🎤 Workshop Coletivo</h3>
+        <p class="desc">Para quem quer começar com investimento reduzido e entrada facilitada.</p>
+        <div class="price">R$ 3.000 <span>+ R$ 250/lote</span></div>
+        <div class="period">Setup + atualizações sob demanda</div>
+        <ul>
+          <li>Setup do GitHub Pages / Vercel</li>
+          <li>Scripts personalizados</li>
+          <li>Atualização por lote (R$ 250)</li>
+          <li>Ou R$ 1.000/mês (4 atualizações)</li>
+          <li>Suporte por e-mail</li>
+        </ul>
+        <a href="#contato" class="btn btn-primary" style="background:var(--gradient-hero);color:#fff">Quero esse formato</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="section-inner">
+    <span class="section-tag">⭐ Prova Social</span>
+    <h2 class="section-title">O Que Dizem Quem Aplicou</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>Depois do Raio-X, meu grupo de WhatsApp deixou de ser um depósito de avisos. Em 15 dias, dois alunos fecharam uma parceria que jamais descobririam sem o mapeamento de sinergias.</p>
+        <div class="author">— Mentor de Alta Performance (SP)</div>
+      </div>
+      <div class="testimonial-card">
+        <p>O resumo pós-Zoom em 2 horas mudou completamente o engajamento. Minha equipe de suporte economiza 12 horas por semana.</p>
+        <div class="author">— Infoprodutor Health & Wellness (MG)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <span class="section-tag">❓ FAQ</span>
+    <h2 class="section-title">Perguntas Frequentes</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Precisa ser presencial? <span class="arrow">▼</span></div>
+        <div class="faq-a">Não. 100% remoto via Zoom. Todo o acompanhamento é feito online.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Quanto tempo leva para implantar? <span class="arrow">▼</span></div>
+        <div class="faq-a">O setup completo leva de 7 a 10 dias úteis. A curadoria contínua começa imediatamente após.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Preciso saber programação? <span class="arrow">▼</span></div>
+        <div class="faq-a">Não. Na modalidade "Aprenda e Faça" você é treinado. Na "Operação Terceirizada", nós fazemos tudo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Funciona para qualquer nicho? <span class="arrow">▼</span></div>
+        <div class="faq-a">Sim. O método é agnóstico de nicho. Já aplicado com saúde, alta performance, tecnologia, educação e bioeconomia.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">O que eu preciso ter para começar? <span class="arrow">▼</span></div>
+        <div class="faq-a">Apenas um grupo de WhatsApp com alunos ativos. Nós fazemos o resto.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contato" class="cta-section">
+  <div class="section-inner">
+    <span class="section-tag" style="color:rgba(255,255,255,0.7)">🚀 Comece Agora</span>
+    <h2 class="section-title">Pronto para Transformar Sua Comunidade?</h2>
+    <p class="section-sub">Agende uma auditoria gratuita de 15 minutos. Sem compromisso.</p>
+    <div class="cta-grid">
+      <a href="https://wa.me/5535997611319?text=Ol%C3%A1%20Fabio%2C%20quero%20agendar%20uma%20auditoria%20gratuita%20do%20meu%20grupo%20de%20WhatsApp!" class="cta-card" style="text-decoration:none;color:#fff">
+        <span class="num">📱</span>
+        <p><strong>WhatsApp</strong><br>(35) 99761-1319</p>
+      </a>
+      <a href="mailto:fabiotakwara@gmail.com" class="cta-card" style="text-decoration:none;color:#fff">
+        <span class="num">📧</span>
+        <p><strong>E-mail</strong><br>fabiotakwara@gmail.com</p>
+      </a>
+      <a href="AGENDAMENTO.html" class="cta-card" style="text-decoration:none;color:#fff">
+        <span class="num">📄</span>
+        <p><strong>Saiba Mais</strong><br>Página completa</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Comunidade Raio-X. Todos os direitos reservados.</span>
+    <span>Feito por <a href="https://fabiotakwara.medium.com" target="_blank">Fabio Takwara</a></span>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20);
+});
+
+// Mobile menu
+document.getElementById('navToggle').addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+// FAQ
+function toggleFaq(el){
+  const item = el.parentElement;
+  item.classList.toggle('open');
+}
+</script>
+</body>
+</html>
