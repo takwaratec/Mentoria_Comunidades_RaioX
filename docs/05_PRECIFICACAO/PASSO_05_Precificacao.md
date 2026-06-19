@@ -19,6 +19,8 @@ No mercado digital de educação, infoprodutos e mentorias high-ticket, existe u
 
 > [!IMPORTANT]
 > **Diferencial Competitivo Único:** Não existem serviços concorrentes diretos que integrem engenharia de dados, inteligência artificial e publicação ágil em painéis web estáticos para grupos de mentoria. Como o sistema é invasivo (altera a dinâmica do grupo e organiza de forma inédita as conexões), ele se posiciona no topo do mercado corporativo digital.
+>
+> > **💡 Nota:** Todos os valores abaixo são **sugestões de referência** baseadas em pesquisa de mercado. A precificação final deve ser ajustada conforme seu posicionamento, ticket médio do seu mercado e complexidade do cliente.
 
 ---
 

@@ -3,20 +3,25 @@ site_url: https://takwaratec.github.io/Mentoria_Comunidades_RaioX/
 site_author: Takwara Tech
 site_description: O Método de Gestão, Curadoria Ativa e Conversão para Grupos de WhatsApp & Mentorias.
 
+# URLs sem diretório — arquivos servem como .html para compatibilidade com links HTML
+use_directory_urls: false
+
 theme:
   name: material
+  logo: assets/images/logo-comunidade-raiox.svg
+  favicon: assets/images/logo-comunidade-raiox.svg
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
-      accent: teal
+      primary: light blue
+      accent: light blue
       toggle:
         icon: material/brightness-7
         name: Mudar para modo escuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: teal
+      primary: light blue
+      accent: light blue
       toggle:
         icon: material/brightness-4
         name: Mudar para modo claro
@@ -25,19 +30,37 @@ theme:
     - navigation.expand
     - navigation.top
     - content.code.copy
+    - content.tabs.link
 
 copyright: '&copy; 2026 Comunidade Raio-X. Todos os direitos reservados.'
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/takwaratec/Mentoria_Comunidades_RaioX
+      name: Repositório no GitHub
+
+extra_css:
+  - assets/css/custom.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@11/dist/mermaid.min.js
 
 markdown_extensions:
   - attr_list
   - md_in_html
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
 
 nav:
   - Início: index.md
@@ -48,3 +71,5 @@ nav:
   - 05. Precificação: 05_PRECIFICACAO/PASSO_05_Precificacao.md
   - 06. Oferta e Naming: 06_OFERTA_NAMING/PASSO_06_Oferta.md
   - 07. Canais de Aquisição: 07_ESTRATEGIA_VENDAS/PASSO_07_Vendas.md
+  - 📖 Glossário: GLOSSARIO.md
+  - 📅 Agendamento: AGENDAMENTO.md

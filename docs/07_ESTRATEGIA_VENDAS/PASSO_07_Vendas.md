@@ -8,16 +8,50 @@ Neste passo, detalhamos a estratégia de captação ativa de clientes (prospecç
 
 A melhor forma de vender a consultoria Comunidade Raio-X é demonstrando o valor em tempo real. Siga este roteiro de vendas:
 
-1. **Mapeamento de Alvos:** Identifique infoprodutores e mentores que você já acompanha ou dos quais é aluno. Grupos de entrada de eventos ao vivo e mentorias em que você participa são locais ideais.
-2. **Abordagem de Alto Valor (Direct/WhatsApp):**
-   * Envie uma mensagem privada para o mentor ou gestor de comunidades:
-     > *"Fala, [Nome]! Tudo bem? Sou aluno da mentoria [Nome] e notei que no nosso grupo do WhatsApp tem vários profissionais fantásticos que estão 'silenciosos'. Como exercício prático de dados, eu fiz uma triagem das apresentações dos últimos 15 membros e achei 3 sinergias de negócios incríveis entre eles.*
-     > 
-     > *Se você quiser, posso fazer uma auditoria rápida e gratuita dos últimos 3 dias de interações do seu grupo para te mostrar onde estão as dúvidas repetitivas que estão sugando o tempo do seu suporte e onde estão as sinergias. Topa bater um papo de 15 minutos?"*
-3. **A Call de 15 Minutos (Diagnóstico):**
-   * Apresente a triagem rápida que você fez (uma versão demonstrativa no GitHub Pages ou Vercel).
-   * Mostre como a equipe dele perde tempo respondendo a links e como os membros perdem o histórico e contexto ao entrarem atrasados (a dor do scroll infinito).
-   * **O Fechamento:** *"Eu posso fazer a implantação completa do Painel Web Raio-X na sua mentoria. Temos duas modalidades: se você tiver equipe própria e quiser autonomia, eu faço todo o setup técnico no seu GitHub/Vercel e o treinamento da sua equipe para operarem de forma independente por R$ 10.000,00 pagos uma única vez. Mas, se preferir que eu cuide de toda a operação técnica nos bastidores (rodar scripts, manter o painel atualizado com novos censos e fazer os resumos das aulas do Zoom em menos de 2h), cobramos uma taxa de montagem e setup inicial de R$ 5.000,00 mais parcelas mensais de R$ 3.500,00 (ou uma fração correspondente por lote de atualizações) pelo período da turma. Qual formato faz mais sentido para a sua estrutura?"*
+```mermaid
+%%{init: {'theme':'base','themeVariables': {'background': 'transparent','primaryColor': '#0d9488','primaryTextColor': '#fff','lineColor': '#5eead4','fontSize': '13px'}}}%%
+graph TD
+    A[Identificar Mentores\nem Grupos de Alunos] --> B[Abordagem de Alto Valor\nAuditoria Gratuita]
+    B --> C{Interesse?}
+    C -->|Sim| D[Call de 15 min:\nMostrar Triagem Demo]
+    C -->|Não| E[Nutrir com Conteúdo\ndo Método RX]
+    D --> F{Fechamento}
+    F -->|Setup + Treinamento| G[Modalidade A:\nDone-With-You<br>R$ 8-12k único]
+    F -->|Operação Terceirizada| H[Modalidade B:\nDone-For-You<br>R$ 3-7,5k/mês]
+    F -->|Adiamento| I[Workshop Coletivo\ncomo Porta de Entrada]
+    I --> J[Setup Reduzido\nR$ 3k + R$ 250/atualização]
+
+    style A fill:#0d948822,stroke:#0d9488,stroke-width:2px
+    style D fill:#0284c722,stroke:#0284c7,stroke-width:2px
+    style F fill:#7c3aed22,stroke:#7c3aed,stroke-width:2px
+```
+
+### 1. Mapeamento de Alvos
+
+Identifique infoprodutores e mentores que você já acompanha ou dos quais é aluno. Grupos de entrada de eventos ao vivo e mentorias em que você participa são locais ideais.
+
+### 2. Abordagem de Alto Valor (Direct/WhatsApp)
+
+Envie uma mensagem privada para o mentor ou gestor de comunidades:
+
+> *"Fala, [Nome]! Tudo bem? Sou aluno da mentoria [Nome] e notei que no nosso grupo do WhatsApp tem vários profissionais fantásticos que estão 'silenciosos'. Como exercício prático de dados, eu fiz uma triagem das apresentações dos últimos 15 membros e achei 3 sinergias de negócios incríveis entre eles.*
+>
+> *Se você quiser, posso fazer uma auditoria rápida e gratuita dos últimos 3 dias de interações do seu grupo para te mostrar onde estão as dúvidas repetitivas que estão sugando o tempo do seu suporte e onde estão as sinergias. Topa bater um papo de 15 minutos?"*
+
+### 3. A Call de 15 Minutos (Diagnóstico)
+
+1. Apresente a triagem rápida que você fez (uma versão demonstrativa no GitHub Pages ou Vercel).
+2. Mostre como a equipe dele perde tempo respondendo a links e como os membros perdem o histórico e contexto ao entrarem atrasados (a dor do scroll infinito).
+3. **O Fechamento:**
+
+> *"Eu posso fazer a implantação completa do Painel Web Raio-X na sua mentoria. Temos duas modalidades:*
+> - *Se você tiver equipe própria e quiser autonomia, eu faço todo o setup técnico no seu GitHub/Vercel e o treinamento da sua equipe para operarem de forma independente — investimento único.*
+> - *Se preferir que eu cuide de toda a operação técnica nos bastidores (rodar scripts, manter o painel atualizado com novos censos e fazer os resumos das aulas do Zoom em menos de 2h), trabalhamos com taxa de montagem + mensalidade operacional.*
+>
+> *Qual formato faz mais sentido para a sua estrutura?"*
+
+> [!NOTE]
+> Os valores exatos de cada modalidade estão detalhados no **[Passo 05 — Precificação](../05_PRECIFICACAO/PASSO_05_Precificacao.html)**.
 
 ---
 
@@ -25,10 +59,18 @@ A melhor forma de vender a consultoria Comunidade Raio-X é demonstrando o valor
 
 Se você quiser vender em escala para múltiplos mentores e futuros gestores:
 
+```mermaid
+%%{init: {'theme':'base','themeVariables': {'background': 'transparent','primaryColor': '#0d9488','lineColor': '#5eead4','fontSize': '14px'}}}%%
+flowchart LR
+    W["🎤 Workshop Ao Vivo<br>Anatomia de Grupos Otimizados"] --> D[Demo ao Vivo<br>Export + Script + Sinergias]
+    D --> O[Oferta Pós-Evento:<br>Setup Facilitado]
+    O --> E1["Setup: R$ 3.000"]
+    O --> E2["Atualização: R$ 250/lote<br>ou R$ 1.000/mês"]
+```
+
 1. **O Evento:** Realize um workshop ao vivo de 2 horas no Zoom chamado: **"A Anatomia de Grupos Otimizados: Como engajar alunos e vender novos produtos via curadoria de WhatsApp"**.
 2. **Demonstração Prática:** Mostre na tela como exportar logs e rodar o script para gerar sinergias ao vivo (usando os dados das apresentações dos próprios participantes do workshop!).
-3. **A Oferta de Prestação de Serviços (Setup + Fração por Atualizações):**
-   * Em vez de vender apenas ingressos de mentoria, você pode ofertar a contratação direta do serviço sob uma modalidade de entrada facilitada para pequenos e futuros mentores:
-     * **Setup de Entrada:** R$ 3.000,00 (taxa inicial para montagem do site no GitHub Pages/Vercel e scripts personalizados).
-     * **Fração por Atualização:** R$ 250,00 por lote de atualização (ou R$ 1.000,00/mês para até 4 atualizações).
-   * Isso reduz a barreira de entrada técnica e financeira, garantindo receita recorrente e estabilidade operacional para quem está começando a tracionar mentorias.
+3. **A Oferta de Prestação de Serviços:** Em vez de vender apenas ingressos de mentoria, oferte a contratação direta do serviço sob uma modalidade de entrada facilitada para pequenos e futuros mentores:
+   - **Setup de Entrada:** Taxa inicial para montagem do site no GitHub Pages/Vercel e scripts personalizados.
+   - **Fração por Atualização:** Valor por lote de atualização ou mensalidade com até 4 atualizações.
+   - Isso reduz a barreira de entrada técnica e financeira, garantindo receita recorrente e estabilidade operacional para quem está começando a tracionar mentorias.

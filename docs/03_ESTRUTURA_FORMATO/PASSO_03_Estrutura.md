@@ -53,10 +53,10 @@ Para colocar o painel no ar, seguimos dois caminhos distintos dependendo da comp
 ### 1. Deploy do Protótipo MkDocs (GitHub Pages)
 Ideal para a documentação metodológica e painéis estáticos simples de consulta rápida.
 
-1. **Criação do Repositório Remoto:** Crie um repositório vazio no seu perfil do GitHub (ex: `Mentoria_Comunidades_RaioX`).
+1. **Criação do Repositório Remoto:** Crie um repositório vazio no seu perfil do GitHub (ex: `ComunidadeRX-MinhaMentoria`).
 2. **Vinculação do Repositório Local:**
    ```bash
-   git remote add origin https://github.com/takwaratec/Mentoria_Comunidades_RaioX.git
+   git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
    git branch -M main
    git push -u origin main
    ```
@@ -64,7 +64,7 @@ Ideal para a documentação metodológica e painéis estáticos simples de consu
    ```bash
    mkdocs gh-deploy
    ```
-   O site estará acessível imediatamente em: `https://takwaratec.github.io/Mentoria_Comunidades_RaioX/`.
+   O site estará acessível imediatamente em: `https://SEU_USUARIO.github.io/SEU_REPOSITORIO/`.
 
 ### 2. Implantação do Painel Avançado/Dashboard (Vercel)
 Ideal para sites dinâmicos baseados em frameworks robustos (Next.js, Nextra ou React Dashboards) com alto apelo estético, interatividade avançada e integrações de IA em tempo real.
