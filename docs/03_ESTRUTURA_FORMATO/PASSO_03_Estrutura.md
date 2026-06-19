@@ -80,3 +80,113 @@ Ideal para sites dinâmicos baseados em frameworks robustos (Next.js, Nextra ou 
 4. **Deploy Automático em Produção:**
    * Clique em **"Deploy"**. A Vercel construirá o painel e fornecerá um domínio de produção com certificado SSL (ex: `suacomunidade-rx.vercel.app`).
    * A partir de agora, qualquer alteração enviada ao GitHub via `git push` disparará um novo deploy automático e seguro em tempo real.
+
+---
+
+## 🔐 Segurança de Dados: Proteção por Senha, Links Expiráveis & Anti-Cópia na Vercel
+
+Ao lidar com painéis na Vercel (especialmente na Modalidade B de Acompanhamento Técnico ou no envio de Prévia/Demo), é fundamental blindar a aplicação contra cópias e vazamento de dados dos alunos. Abaixo estão os códigos e fluxos práticos para implementar essa segurança.
+
+### 1. Middleware de Autenticação por Senha e Token Temporal (Next.js)
+
+Com o **Edge Middleware** do Next.js na Vercel, interceptamos a requisição antes de carregar a página e verificamos se o acesso está dentro do prazo contratado ou se a senha foi fornecida.
+
+Crie o arquivo `middleware.js` na raiz do seu projeto Next.js:
+
+```javascript
+import { NextResponse } from 'next/server';
+import { jwtVerify } from 'jose'; // Biblioteca leve para decodificar JWT na Edge
+
+const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || 'chave_secreta_padrao');
+
+export async function middleware(request) {
+  const { pathname, searchParams } = request.nextUrl;
+
+  // 1. Proteger apenas as rotas de Painel e Demo
+  if (pathname.startsWith('/raio-x') || pathname.startsWith('/demo')) {
+    const token = searchParams.get('token') || request.cookies.get('rx-token')?.value;
+
+    if (!token) {
+      // Redireciona para página de login ou erro
+      return NextResponse.redirect(new URL('/login', request.url));
+    }
+
+    try {
+      // 2. Decodifica e verifica o Token de Tempo
+      const { payload } = await jwtVerify(token, JWT_SECRET);
+      
+      // 3. Verifica se a sessão expirou
+      const now = Math.floor(Date.now() / 1000);
+      if (payload.exp && now > payload.exp) {
+        // Token expirado (Ex: Passou das 2 horas acordadas para a Demo)
+        return NextResponse.redirect(new URL('/expired', request.url));
+      }
+
+      // Se tudo estiver certo, prossegue para o painel
+      const response = NextResponse.next();
+      // Grava o cookie para navegação subsequente do aluno
+      response.cookies.set('rx-token', token, { maxAge: 3600 * 12, httpOnly: true });
+      return response;
+      
+    } catch (err) {
+      // Token inválido ou adulterado
+      return NextResponse.redirect(new URL('/login?error=invalid_token', request.url));
+    }
+  }
+
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ['/raio-x/:path*', '/demo/:path*'],
+};
+```
+
+### 2. Bloqueio de Cópia e Seleção (Camada UX)
+
+Para dificultar que o usuário copie os dados da tabela ou das sinergias, aplique as seguintes travas no frontend da aplicação:
+
+#### CSS (Bloqueio de Seleção de Texto)
+Adicione esta classe aos elementos da tabela ou de listagem no seu arquivo CSS global (`globals.css` ou `index.css`):
+```css
+.anti-copy {
+  user-select: none; /* Chrome, Opera, Safari, Firefox */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+```
+
+#### JavaScript (Bloqueio de Clique Direito e Atalhos de Teclado)
+Adicione este hook no componente base do React/Next.js (`_app.js` ou no layout principal):
+```javascript
+import { useEffect } from 'react';
+
+export default function AntiCopyWrapper({ children }) {
+  useEffect(() => {
+    // 1. Bloqueia o clique com o botão direito (menu de contexto)
+    const handleContextMenu = (e) => e.preventDefault();
+    document.addEventListener('contextmenu', handleContextMenu);
+
+    // 2. Bloqueia atalhos comuns de cópia (Ctrl+C, Cmd+C, Ctrl+U para código fonte)
+    const handleKeyDown = (e) => {
+      const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+      const isCopy = (e.key === 'c' || e.key === 'C') && (isMac ? e.metaKey : e.ctrlKey);
+      const isSourceCode = (e.key === 'u' || e.key === 'U') && (isMac ? e.metaKey : e.ctrlKey);
+      
+      if (isCopy || isSourceCode) {
+        e.preventDefault();
+        alert('🔒 A cópia de dados deste painel de segurança é restrita.');
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  return <div className="anti-copy">{children}</div>;
+}
+```

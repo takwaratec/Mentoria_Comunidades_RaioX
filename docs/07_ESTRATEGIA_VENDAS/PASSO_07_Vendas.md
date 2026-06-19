@@ -94,3 +94,24 @@ flowchart LR
    - **Setup de Entrada:** Taxa inicial para montagem do site no GitHub Pages/Vercel e scripts personalizados.
    - **Fração por Atualização:** Valor por lote de atualização ou mensalidade com até 4 atualizações.
    - Isso reduz a barreira de entrada técnica e financeira, garantindo receita recorrente e estabilidade operacional para quem está começando a tracionar mentorias.
+
+---
+
+## 🛡️ Estratégia de Demonstração Controlada (Proteção de Propriedade Intelectual)
+
+A prévia do Raio-X que você gera para a call de 15 minutos é um **entregável real e valioso**. Para evitar que o prospect se aproprie dos dados das sinergias e do mapeamento sem fechar o contrato, adote um dos três níveis de controle abaixo durante o processo de vendas:
+
+### 📺 Nível 1: Transmissão Exclusiva (Zoom/Meet - Altamente Recomendado)
+* **Como funciona:** Você apresenta o painel **completo** com todos os dados abertos compartilhando a sua tela durante a chamada ao vivo. 
+* **Acesso:** Você **NÃO** envia nenhum link ou arquivo ao cliente. Ele vê o valor na prática, entende a inteligência das conexões, mas a posse do arquivo e do link permanece sob seu controle absoluto.
+* **Benefício:** Risco zero de vazamento de dados ou de apropriação indevida da prévia.
+
+### 🔒 Nível 2: Link Demo com Efeito "Curiosity Gap" (Visualização Parcial)
+* **Como funciona:** Se o cliente exigir visualizar a usabilidade do painel diretamente no celular dele para testar, você envia um link de demonstração parcialmente bloqueado.
+* **Acesso:** O painel exibe apenas 2 ou 3 sinergias de amostra. Os dados confidenciais e os contatos das outras dezenas de membros aparecem cobertos com um filtro visual borrado (CSS `filter: blur()`) e um ícone de cadeado.
+* **Mensagem na tela:** *"🔒 Conteúdo completo desbloqueado mediante contratação do Setup Comercial."*
+
+### ⏳ Nível 3: Link Auto-Expirável com Autodestruição (Edge Middleware)
+* **Como funciona:** Você envia um link com acesso completo ao painel demo, mas o link expira automaticamente após um período de tempo pré-determinado (ex: 2 horas após a call de vendas).
+* **Acesso:** O Middleware da Vercel intercepta a requisição, lê a chave de expiração na URL e, caso o tempo tenha expirado, redireciona o cliente para uma tela amigável de bloqueio: *"Esta prévia expirou. Entre em contato com Fabio Takwara para reativar o acesso ou assinar o plano premium."*
+* **Gatilho Mental:** O prazo de expiração serve também como um poderoso **gatilho de escassez e urgência** para acelerar a tomada de decisão do mentor.
