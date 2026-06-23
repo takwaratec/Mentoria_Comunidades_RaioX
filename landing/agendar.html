@@ -1,41 +1,244 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport"content="width=device-width,initial-scale=1.0"><title>Agendar — Raio-X</title><style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a2e;background:#f8faff;line-height:1.6;padding:40px 24px;max-width:680px;margin:0 auto}
-h1{color:#0d47a1;font-size:1.5rem;margin-bottom:20px}
-.box{background:linear-gradient(135deg,#e3f2fd,#fff);border:2px solid #2196f3;border-radius:14px;padding:24px;text-align:center;margin:20px 0}
-.box p{margin:8px 0}
-a{color:#1565c0;font-weight:600;text-decoration:none}
-.btn{display:inline-block;padding:12px 28px;border-radius:10px;background:linear-gradient(135deg,#1565c0,#0d47a1);color:#fff!important;text-decoration:none;margin:8px 0;font-weight:600}
-hr{border:none;border-top:1px solid #bbdefb;margin:16px 0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
-@media(max-width:600px){.grid{grid-template-columns:1fr}}
-.card{background:#fff;border:1px solid #e8edf5;border-radius:10px;padding:16px}
-.card h4{color:#0d47a1;margin-bottom:6px}
-.card p{font-size:0.9rem;color:#475569;line-height:1.6;margin-bottom:6px}
-</style></head><body>
-<h1>📅 Agende Sua Auditoria Gratuita</h1>
-<div class="box">
-<p>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/5535997611319">(35) 99761-1319</a></p>
-<p>📧 <strong>E-mail:</strong> <a href="mailto:fabiotakwara@gmail.com">fabiotakwara@gmail.com</a></p>
-<p>🌐 <strong>Medium:</strong> <a href="https://fabiotakwara.medium.com">fabiotakwara.medium.com</a></p>
-<hr>
-<p><strong>📍 Limeira / SP</strong> — Atendimento remoto via Zoom</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar — Indisponível</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0c10;
+            --card-bg: rgba(25, 28, 36, 0.65);
+            --border: rgba(255, 255, 255, 0.08);
+            --primary: #3b82f6;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --glow: rgba(59, 130, 246, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ambient backgrounds */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+            top: 20%;
+            left: 25%;
+            z-index: 0;
+            filter: blur(40px);
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+            bottom: 15%;
+            right: 20%;
+            z-index: 0;
+            filter: blur(50px);
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .status-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 6px 16px;
+            border-radius: 30px;
+            margin-bottom: 24px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ef4444;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .status-dot::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background-color: rgba(239, 68, 68, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+
+        .status-text {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #f87171;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 24px 0;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .footer {
+            margin-top: 24px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.25);
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="status-container">
+            <span class="status-dot"></span>
+            <span class="status-text">Indisponível</span>
+        </div>
+        
+        <h1>Página Temporariamente Indisponível</h1>
+        
+        <p>A página e a documentação associadas ao projeto <strong>Comunidades Raio-X</strong> foram retiradas do ar por tempo indeterminado.</p>
+        
+        <div class="divider"></div>
+        
+        <div class="links">
+            <a href="https://wa.me/5535997611319" class="btn btn-primary">
+                <span>Contatar via WhatsApp</span>
+            </a>
+            <a href="mailto:fabiotakwara@gmail.com" class="btn btn-secondary">
+                <span>Enviar E-mail</span>
+            </a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        © 2026 Tecnologia Takwara. Todos os direitos reservados.
+    </div>
 </div>
-<p style="text-align:center"><a href="https://wa.me/5535997611319" class="btn">📱 Agendar pelo WhatsApp</a></p>
-<h2>Sobre o Mentor</h2>
-<div class="grid">
-<div class="card">
-<h4>🧠 Fabio Takwara</h4>
-<p><strong>Consultor de Operações Digitais · Autodidata</strong></p>
-<p>Mais de uma década em tecnologia, dados e regeneração. Atua na interseção entre IA e bioeconomia amazônica. Iniciando a jornada em engenharia de comunidades — este método é o primeiro passo.</p>
-<p>Colabora com o grupo de pesquisa <strong>MQTF (Mulheres Que Tecem a Floresta)</strong> — UnB/UFRR/UFAC.</p>
-</div>
-<div class="card">
-<h4>📝 Publicações</h4>
-<p>Escreve no <strong>Medium</strong> sobre tecnologia, dados e regeneração. Esta documentação marca o início de uma nova frente.</p>
-<p><a href="https://fabiotakwara.medium.com">→ Leia no Medium</a></p>
-</div>
-</div>
-<p style="text-align:center;margin-top:24px"><a href="/" class="btn">← Voltar ao site</a></p>
-<p style="text-align:center;margin-top:40px;color:#94a3b8;font-size:0.82rem">© 2026 Comunidade Raio-X</p>
-</body></html>
+
+</body>
+</html>
